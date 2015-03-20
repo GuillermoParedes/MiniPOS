@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text="A"
                 android:id="@+id/button"
-                android:layout_marginLeft="20sp"
+                android:layout_marginLeft="10sp"
                 android:onClick="anterior"/>
 
             <Button
