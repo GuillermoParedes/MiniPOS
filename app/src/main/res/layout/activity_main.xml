@@ -1,11 +1,103 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:weightSum="1">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.91"
+        android:weightSum="1">
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="                 Punto De Venta"
+            android:padding="10dp"
+            android:textAlignment="gravity"
+            android:id="@+id/textView" />
+
+        <ImageView
+            android:layout_width="308dp"
+            android:layout_height="120dp"
+            android:id="@+id/carrusel"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.53"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:paddingLeft="15sp"
+
+            >
+
+            <Button
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:id="@+id/button"
+                android:layout_marginLeft="20sp"
+                android:onClick="anterior"/>
+
+            <Button
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:text="C"
+                android:id="@+id/button2"
+                android:onClick="comprar2"/>
+
+            <Button
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:text="D"
+                android:id="@+id/button3"
+                android:onClick="devolver2"/>
+            <Button
+                android:layout_width="70sp"
+                android:layout_height="wrap_content"
+                android:text="S"
+                android:id="@+id/button4"
+                android:onClick="siguiente"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Total Unidades"
+            android:id="@+id/textView2"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/unidadesText"
+            android:layout_gravity="right" />
+
+        <TextView
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Total a pagar"
+            android:id="@+id/textView3"
+            android:layout_weight="0.04" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/pagarText" />
+
+    </LinearLayout>
+
+</FrameLayout>
